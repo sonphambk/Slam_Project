@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <!-- Run the map server -->
+   <node name="map_server" pkg="map_server" type="map_server" args="$(find navigation)/maps/map.yaml" output="screen"/>
+   <!-- Localization-->
+  <include file="$(find amcl)/examples/amcl_diff.launch" >
+    <param name="odom_frame_id" value="odom"/>
+    <param name="base_frame_id" value="base_footprint"/>
+    <param name="global_frame_id" value="map"/>
+    <param name="transform_tolerance" value="0.2"/>
+    <param name="min_particles" value="20"/>
+    <param name="max_particles" value="400"/>
+  </include> 
+<!-- Move base -->
+
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <param name="controller_frequency" value="10.0"/>
+    <remap from="cmd_vel" to="cmd_vel"/>
+    <remap from="odom" to="odom"/>
+    <remap from="robot/laser/scan" to="/scan" />
+    <param name="base_global_planner" type="string" value="navfn/NavfnROS" />
+    <!-- if use TrajectoryPlannerROS-->
+    <!--param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS"/-->
+    <!--if use Dynamic Window Approach-->   
+    <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS"/>
+    <rosparam file="$(find navigation)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find navigation)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find navigation)/param/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find navigation)/param/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find navigation)/param/base_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find navigation)/param/dwa_local_planner_params.yaml" command="load" />
+  </node>
+
+</launch>

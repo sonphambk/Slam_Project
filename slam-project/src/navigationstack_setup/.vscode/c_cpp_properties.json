@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/sonpham/slam-project/devel/include/**",
+                "/opt/ros/melodic/include/**",
+                "/home/sonpham/slam-project/src/diff_drive/include/**",
+                "/home/sonpham/slam-project/src/navigationstack_setup/include/**",
+                "/opt/ros/melodic/share/turtlebot3_simulations/turtlebot3_fake/include/**",
+                "/opt/ros/melodic/share/turtlebot3_simulations/turtlebot3_gazebo/include/**",
+                "/opt/ros/melodic/share/turtlebot3/turtlebot3_slam/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

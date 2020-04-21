@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Example 3 -->
+  <node pkg="diff_drive" type="example8" name="example8" output="screen"/>
+
+</launch>

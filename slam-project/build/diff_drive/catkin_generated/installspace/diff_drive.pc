@@ -1,0 +1,8 @@
+prefix=/home/sonpham/slam-project/install
+
+Name: diff_drive
+Description: Description of diff_drive
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy rviz std_msgs tf urdf xacro message_runtime geometry_msgs sensor_msgs cv_bridge image_transport

@@ -1,0 +1,8 @@
+prefix=/home/sonpham/slam-project/install
+
+Name: navigationstack_setup
+Description: Description of navigationstack_setup
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
