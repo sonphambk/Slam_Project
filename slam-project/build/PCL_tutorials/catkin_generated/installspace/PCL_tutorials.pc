@@ -1,8 +1,0 @@
-prefix=/home/sonpham/slam-project/install
-
-Name: PCL_tutorials
-Description: Description of PCL_tutorials
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

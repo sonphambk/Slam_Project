@@ -1,2 +1,0 @@
-diff_drive:navigation:navigationstack_setup:pcl_tutorials
--DCATKIN_DEVEL_PREFIX=/home/sonpham/slam-project/devel -DCMAKE_INSTALL_PREFIX=/home/sonpham/slam-project/install -G Unix Makefiles
