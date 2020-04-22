@@ -1,7 +1,7 @@
 DWAPlannerROS:
     acc_lim_x: 0.15
     acc_lim_y: 0
-    acc_lim_th: 0.15
+    acc_lim_th: 0.075
     max_vel_trans: 0.5
     min_vel_trans: 0.0
 
@@ -9,7 +9,7 @@ DWAPlannerROS:
     min_vel_x: 0.0
     max_vel_y: 0
     min_vel_y: 0
-    max_vel_theta: 0.2
+    max_vel_theta: 0.15
     min_vel_theta: 0.0
 
     yaw_goal_tolerance: 0.15  #0.7
